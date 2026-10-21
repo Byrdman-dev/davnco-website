@@ -12,11 +12,11 @@
   --text-secondary: #9aa4bd;
   --text-tertiary: #8994b0;
 
-  --violet: #8b5cf6;
-  --violet-soft: #a78bfa;
+  --violet: #7d67f9;
+  --violet-soft: #9996fd;
   --cyan: #22d3ee;
-  --gradient: linear-gradient(135deg, #8b5cf6 0%, #6366f1 50%, #22d3ee 100%);
-  --gradient-soft: linear-gradient(135deg, rgba(139,92,246,0.18), rgba(34,211,238,0.14));
+  --gradient: #7d67f9;
+  --gradient-soft: rgba(125,103,249,0.16);
 
   --success: #34d399;
   --danger: #f87171;
@@ -28,7 +28,7 @@
   --radius-md: 16px;
   --radius-lg: 24px;
 
-  --shadow-glow: 0 0 0 1px var(--border), 0 20px 60px -20px rgba(139,92,246,0.25);
+  --shadow-glow: 0 0 0 1px var(--border), 0 20px 60px -20px rgba(125,103,249,0.25);
   --ease: cubic-bezier(.22,1,.36,1);
 }
 
@@ -122,7 +122,7 @@ button{ font-family: inherit; cursor: pointer; }
   border: 1px solid transparent; transition: transform .2s var(--ease), filter .2s, background .2s, border-color .2s;
   white-space: nowrap;
 }
-.btn-primary{ background: var(--gradient); color:#05070d; box-shadow: 0 8px 24px -8px rgba(139,92,246,0.55); }
+.btn-primary{ background: var(--gradient); color:#05070d; box-shadow: 0 8px 24px -8px rgba(125,103,249,0.55); }
 .btn-primary:hover{ transform: translateY(-2px); filter: brightness(1.08); }
 .btn-ghost{ background: transparent; color: var(--text-primary); border-color: var(--border-strong); }
 .btn-ghost:hover{ background: var(--surface); border-color: var(--violet-soft); }
@@ -140,7 +140,7 @@ button{ font-family: inherit; cursor: pointer; }
 .hero{ position:relative; padding: 8.5rem 0 5rem; overflow:hidden; }
 .hero-glow{
   position:absolute; top:-220px; left:50%; width:900px; height:900px; transform:translateX(-50%);
-  background: radial-gradient(circle, rgba(139,92,246,0.30) 0%, rgba(34,211,238,0.12) 45%, transparent 70%);
+  background: radial-gradient(circle, rgba(125,103,249,0.30) 0%, rgba(125,103,249,0.12) 45%, transparent 70%);
   filter: blur(10px); z-index:-1; animation: drift 14s ease-in-out infinite alternate;
 }
 @keyframes drift{
@@ -388,7 +388,7 @@ button{ font-family: inherit; cursor: pointer; }
 .back-to-top{
   position: fixed; right:24px; bottom:24px; width:44px; height:44px; border-radius:50%;
   background: var(--gradient); color:#05070d; border:none; font-size:1.1rem; font-weight:700;
-  box-shadow: 0 8px 24px -6px rgba(139,92,246,0.5); opacity:0; pointer-events:none; transform: translateY(10px);
+  box-shadow: 0 8px 24px -6px rgba(125,103,249,0.5); opacity:0; pointer-events:none; transform: translateY(10px);
   transition: opacity .3s, transform .3s; z-index: 90;
 }
 .back-to-top.show{ opacity:1; pointer-events:auto; transform:none; }
