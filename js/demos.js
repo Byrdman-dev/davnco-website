@@ -253,7 +253,7 @@ function wait(ms){ return new Promise(resolve => setTimeout(resolve, ms)); }
   }
 
   function businessHours(){
-    botSay('IntegralAI’s team is reachable Monday through Friday, 9am–5pm Eastern. This AI receptionist, though, is available 24/7 to take your call.')
+    botSay('davnco’s team is reachable Monday through Friday, 9am–5pm Eastern. This AI receptionist, though, is available 24/7 to take your call.')
       .then(afterAnswer);
   }
 
@@ -281,7 +281,7 @@ function wait(ms){ return new Promise(resolve => setTimeout(resolve, ms)); }
   }
 
   function bookingConfirm(day, time){
-    botSay(`You're all set — I've noted a preference for ${day} ${time}. Someone from IntegralAI will call to confirm the exact time. Anything else I can help with?`)
+    botSay(`You're all set — I've noted a preference for ${day} ${time}. Someone from davnco will call to confirm the exact time. Anything else I can help with?`)
       .then(afterAnswer);
   }
 
@@ -346,7 +346,7 @@ function wait(ms){ return new Promise(resolve => setTimeout(resolve, ms)); }
   }
 
   function endInteraction(){
-    botSay('Thanks for calling IntegralAI — have a great day!').then(() => {
+    botSay('Thanks for calling davnco — have a great day!').then(() => {
       setTimeout(endCall, 900);
     });
   }
@@ -359,8 +359,8 @@ function wait(ms){ return new Promise(resolve => setTimeout(resolve, ms)); }
     startBtn.disabled = true;
     endBtn.disabled = false;
     callDot.classList.add('live');
-    callStatusText.textContent = 'Connected — IntegralAI Reception';
-    mainMenu('Thank you for calling IntegralAI, this is your AI receptionist. How can I help you today?');
+    callStatusText.textContent = 'Connected — davnco Reception';
+    mainMenu('Thank you for calling davnco, this is your AI receptionist. How can I help you today?');
   }
 
   function endCall(){
