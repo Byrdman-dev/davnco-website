@@ -103,6 +103,8 @@ button{ font-family: inherit; cursor: pointer; }
   transform: scaleX(0); transform-origin: left; transition: transform .25s var(--ease);
 }
 .main-nav a:not(.nav-cta):hover::after{ transform: scaleX(1); }
+.main-nav a[aria-current="page"]:not(.nav-cta){ color: var(--text-primary); }
+.main-nav a[aria-current="page"]:not(.nav-cta)::after{ transform: scaleX(1); }
 .nav-cta{
   background: var(--gradient); color:#05070d !important; padding:.55rem 1.1rem; border-radius: 999px;
   font-weight:600; transition: filter .2s, transform .2s;
