@@ -1,16 +1,29 @@
-# IntegralAI Website
+# DAVnCO Website
 
-A static marketing site for IntegralAI — AI integration for small and medium-sized
+A static marketing site for DAVnCO — AI integration for small and medium-sized
 businesses. Plain HTML/CSS/JS, no build step, deployable directly to GitHub Pages.
 
 ## Structure
 
+Each top-level nav item is its own static page, sharing the same header/footer
+markup (duplicated per page — there's no templating step in this stack):
+
 ```
 website/
-├── index.html
+├── index.html        # Home — hero + condensed previews linking to the full pages
+├── services.html
+├── projects.html
+├── demos.html
+├── process.html
+├── about.html
+├── contact.html
 ├── css/styles.css
-├── js/main.js       # nav, scroll reveal, stat counters, demo tabs, contact form
-├── js/demos.js       # RAG assistant + AI receptionist simulated demos
+├── js/main.js         # shared on every page: header scroll, mobile nav, scroll reveal, footer year
+├── js/home.js          # index.html only: hero word rotator, stat counters
+├── js/contact.js        # contact.html only: contact form submit handler
+├── js/demos.js          # demos.html only: RAG assistant + AI receptionist simulated demos, demo tab switching
+├── js/rag-match.js       # demos.html only: on-device semantic matching used by the RAG demo
+├── js/embedder.js         # demos.html only: shared transformers.js embedding pipeline
 ├── assets/favicon.svg
 └── README.md
 ```

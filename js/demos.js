@@ -431,3 +431,20 @@ function wait(ms){ return new Promise(resolve => setTimeout(resolve, ms)); }
     handleCallerQuestion(value);
   });
 })();
+
+// =========================================================================
+// Demo tab switching
+// =========================================================================
+const demoTabs = document.querySelectorAll('.demo-tab');
+const demoPanels = document.querySelectorAll('.demo-panel');
+
+demoTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    demoTabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+    demoPanels.forEach(p => p.classList.remove('active'));
+
+    tab.classList.add('active');
+    tab.setAttribute('aria-selected', 'true');
+    document.getElementById(tab.dataset.target).classList.add('active');
+  });
+});
